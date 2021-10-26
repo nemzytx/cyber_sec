@@ -1,3 +1,10 @@
+#Author : Nemuel Wainaina
+
+#This program takes the target from the users and performs port scanning on the specified target/s 
+#could be one or more targets
+#Also, the user specifies the number of ports he or she intends to scan or check whether they are open
+
+#import the required libraries first
 import socket
 from IPy import IP
 from termcolor import colored
