@@ -65,6 +65,7 @@ if __name__ == "__main__":
         for target in targets.split(","):
             scan(target)
     else:
+        #the targets are one, so we just go ahead and scan the one target directly
         scan(targets)
                 
     
