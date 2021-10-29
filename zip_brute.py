@@ -35,17 +35,17 @@ def main():
         pass_file = options.pfile
     
     #we check if the zip file exists at all in the first place, haha!
-    if not os.path.isfile(file):
+    if not os.path.isfile(zip_file):
         print(colored("[-]The Zip File Does Not Exist !"), "red")
         sys.exit()
     
     #now check whether we have access to play around with the zip file
-    if not os.access(file, os.R_OK):
+    if not os.access(zip_file, os.R_OK):
         print(colored("[!]Access To The File Is Denied !"), "red")
         sys.exit(0)
         
     #coast clear, now create a file descriptor pointing to the zip file, the mode is read(r)
-    pass_file = open(zipfile, "r")
+    pass_file = open(zip_file, "r")
         
     #next step is to create an object of the ZipFile class found in the zipfile module
     zfile = zipfile.ZipFile(zip_file)
